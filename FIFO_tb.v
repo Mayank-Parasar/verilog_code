@@ -32,7 +32,7 @@ module FIFO_tb(); // Note: this has no inp/op ports
     #14 data_in <= 4'b0001;
     #16 data_in <= 4'b1001;
     // terminate your simulation here...
-    # 17 $finish;
+    #17 $finish;
   end
   
   // toggle your clock here
@@ -53,9 +53,10 @@ module FIFO_tb(); // Note: this has no inp/op ports
   // your procedural block for display
   initial begin
     $display("+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+");
-    $display("|clock|reset|data_in|data_out|");
+    $display("|clock|reset|data_in|second|third|data_out|");
     $display("+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+");
-    $monitor("| %b | %b | %b | %b |", clock, reset, data_in, data_out);
+    $monitor("| %b | %b | %b | %b | %b | %b |", 
+    	clock, reset, data_in, FIFO_tb.myFIFO.second, FIFO_tb.myFIFO.third, data_out);
   end
   
 endmodule
