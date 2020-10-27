@@ -3,7 +3,7 @@
 // Design Name : adder_hier
 // File Name : adder_hier.v
 // Fucntion : This program shows verilog heir path works
-// Coder: Mayank
+// Coder: Mayank Parasar
 // --------------------------
 `include "comment.v"
 module adder_hier (
